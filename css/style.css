@@ -1,0 +1,101 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+    background-color: #f095b3;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    margin-top: 70px; /* Este valor depende de la altura de tu navbar */
+    background-color: #f095b3; /* Ahora sí se verá el rosado aquí también */
+}
+
+.contenedor {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+  
+.contenedor2 {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 60rem;
+    margin: auto;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+ 
+.fotos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10rem; /* separación entre cada item */
+    padding: 2rem;
+}
+
+/* Contenedor de cada foto o video */
+.foto-item {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    max-width: 320px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: transform 0.2s ease;
+}
+
+.foto-item:hover {
+    transform: scale(1.02); /* pequeño zoom al pasar el mouse */
+}
+
+.foto-item img,
+.foto-item video {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    object-fit: cover;
+}
+
+footer {
+    background-color: #ffe6e6;
+    padding: 20px;
+    text-align: center;
+    color: #333;
+    font-size: 14px;
+}
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .fotos {
+        gap: 2rem;
+    }
+
+    .foto-item {
+        max-width: 90%;
+    }
+}
+
+
+  @media (min-width: 768px) {
+    footer {
+      font-size: 16px;
+      padding: 25px;
+    }
+  }
